@@ -1,11 +1,16 @@
 def fares(age, student=False, senior=False):
-    print age,student,senior
-    return 'hel'
+    if student or senior:
+        return 'halv'
+    else:
+        if age <20 or age >65:
+            return 'halv'
+        else:
+            return 'hel'
 
 
+print 'child 20', fares(20)
+print 'student 10',fares(10)
+print 'vuxen 35', fares(35)
+print 'senior 65', fares(15)
 
-
-
-fares(10)
-fares(65,senior=True)
-fares(25,student=True)
+print 'Hej'
